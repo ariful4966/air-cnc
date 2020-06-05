@@ -1,0 +1,42 @@
+
+.custom-button-warning{
+    background: #f44336 !important;
+}
+
+.rounded.custom-button{
+    border-radius: 50px !important;
+}
+.custom-button{
+    background: rgb(43, 222, 140);
+	background: linear-gradient(
+		90deg,
+		rgba(43, 222, 140, 1) 50%,
+		rgba(92, 232, 101, 1) 100%
+	);
+	border: none;
+	padding: 5px 25px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 300;
+	border-radius: 5px;
+}
+.custom-button-outline.custom-button {
+	background: none;
+	border: 2px solid #4ae474;
+	color: #2bde8c;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.custom-button-right {
+	text-align: right !important;
+	margin-left: auto;
+	display: flex;
+}
+/* .fullWidth {
+	width: 100%;
+	padding: 14px 0px;
+}
+.custom-button svg {
+	margin-right: 10px;
+} */
+
