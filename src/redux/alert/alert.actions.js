@@ -18,4 +18,5 @@ export const alertAction = (msg, alertType) => async (dispatch) => {
     }catch(e){
         console.log(e.massage);
     }
-}
+};
+export default alertAction;

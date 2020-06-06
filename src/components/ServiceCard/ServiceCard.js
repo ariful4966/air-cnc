@@ -1,12 +1,11 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import './ServiceCard.css';
 
 const ServiceCard = ({ data }) => {
-    const { place, title, price, rating, thumbnail } = data;
+    const { place, title, price, rating, thumbnail   } = data;
     return (
         <div className="serviceCard">
             <div className="serviceThumbnail">
@@ -18,11 +17,11 @@ const ServiceCard = ({ data }) => {
                 <div className="serviceMeta">
                     <h5 className="price">${price} per person</h5>
                     <div className="rating">
-                        <FontAwesome icon={faStar} />
-                        <FontAwesome icon={faStar} />
-                        <FontAwesome icon={faStar} />
-                        <FontAwesome icon={faCoffee} />
-                        <FontAwesome icon={faStarHalfAlt} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStar} />
+                        <FontAwesomeIcon icon={faStarHalfAlt} />
                         <span>{rating}</span>
                     </div>
                 </div>

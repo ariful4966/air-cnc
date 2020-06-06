@@ -7,9 +7,11 @@ import { Alert } from 'react-bootstrap';
 import { today } from '../utils/getData';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {  faCalendarAlt, faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import  '../CustomButton/CustomButton.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FontAwesome from 'react-fontawesome';
-import { faCalenderArt, faSearch } from "@fortawesome/free-solid-svg-icons";
-import CustomButton from '../CustomButton/CustomButton';
 
 const BookingFormBook = ({ getBookingData, history, alertAction }) => {
     const [formData, setFormData] = useState({
@@ -44,7 +46,7 @@ const BookingFormBook = ({ getBookingData, history, alertAction }) => {
         })
     }
     return (
-        <div className="booking-form-blog">
+        <div className="booking-form-block">
             <h2>Where do you want to go?</h2>
             <form action="" onSubmit={onSubmitHandler}>
                 <Alert></Alert>
@@ -69,7 +71,7 @@ const BookingFormBook = ({ getBookingData, history, alertAction }) => {
                                 min={today}
                                 onChange={onChangeHandler}
                             />
-                            {/* <FontAwesome icon={faCalenderArt} /> */}
+                            <FontAwesomeIcon icon={faCalendarAlt} />
                         </div>
 
                     </div>
@@ -83,7 +85,7 @@ const BookingFormBook = ({ getBookingData, history, alertAction }) => {
                                 min={arrival}
                                 onChange={onChangeHandler}
                             />
-                            {/* <FontAwesome icon={faCalenderArt} /> */}
+                            <FontAwesomeIcon icon={faCalendarAlt} />
                         </div>
 
                     </div>
@@ -135,14 +137,13 @@ const BookingFormBook = ({ getBookingData, history, alertAction }) => {
                             </span>
                         </div>
                     </div>
-                    <CustomButton >Apply</CustomButton>
+                    <button className="custom-button-right custom-button-outline custom-button" >Apply</button>
                 </div>
-                <CustomButton type="submit" fulWidth > <FontAwesome icon={faSearch}/> Search</CustomButton>
+                <button type="submit" className="fullWidth custom-button" > <FontAwesomeIcon icon={faSearch}/> Search</button>
             </form>
         </div>
     );
 };
-
 export default withRouter(
     connect(null, { getBookingData, alertAction })(BookingFormBook)
-);
+)

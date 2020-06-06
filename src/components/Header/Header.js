@@ -3,7 +3,7 @@ import {  Container,  Row, Col } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
-import CustomButton from '../CustomButton/CustomButton';
+// import CustomButton from '../CustomButton/CustomButton';
 import { connect } from 'react-redux';
 import {logout} from '../../redux/user/user.actions';
 
@@ -53,11 +53,11 @@ const Header = ({ auth, logout }) => {
                                                 {
                                                     !auth ? (
                                                         <Link to="/auth">
-                                                            <CustomButton rounded >Login</CustomButton>
+                                                            <button className=" custom-button rounded" >Login</button>
                                                         </Link>
                                                     ) : (
                                                             <li className="option" onClick={() => logout()}>
-                                                                <CustomButton rounded warning>Logout</CustomButton>
+                                                                <button className=" custom-button rounded custom-button-warning">Logout</button>
                                                             </li>
                                                         )
                                                 }
@@ -72,12 +72,12 @@ const Header = ({ auth, logout }) => {
                                                                 <Link to="/house">Login</Link>
                                                             </li>
                                                             <li className="option">
-                                                                <CustomButton rounded>Sign up</CustomButton>
+                                                                <button className="custom-button rounded">Sign up</button>
                                                             </li>
                                                         </Fragment>
                                                     ) : (
                                                             <li className="option" onClick={() => logout()}>
-                                                                <CustomButton rounded warning>Logout</CustomButton>
+                                                                <button className=" custom-button rounded custom-button-warning">Logout</button>
                                                             </li>
                                                         )
                                                 }
